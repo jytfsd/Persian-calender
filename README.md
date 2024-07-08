@@ -10,13 +10,15 @@
 ```java
     PersianCalender persianCalender = new PersianCalender();
     System.out
-                .println(persianCalender.persianStandardize(LocalDate.now(ZoneId.of("Asia/Tehran")), Optional.empty())); // ۲۰۲۴/۷/۸
+                .println(persianCalender.persianStandardize(LocalDate.now(ZoneId.of("Asia/Tehran")),
+                                             Optional.empty())); // ۲۰۲۴/۷/۸
 ```
 ```java
         PersianCalender persianCalender = new PersianCalender();
         System.out
-                .println(persianCalender.persianStandardize(LocalDate.now(ZoneId.of("Asia/Tehran")),
-                        Optional.of(FormatStyle.FULL)));  // دوشنبه ۸ مهر ۲۰۲۴
+                .println(persianCalender.persianStandardize(LocalDate.now(
+                        ZoneId.of("Asia/Tehran")),
+                            Optional.of(FormatStyle.FULL)));  // دوشنبه ۸ مهر ۲۰۲۴
 ```
 ```java
         PersianCalender persianCalender = new PersianCalender();
