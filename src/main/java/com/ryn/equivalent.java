@@ -3,7 +3,13 @@ package com.ryn;
 import java.util.Arrays;
 import java.util.Optional;
 
-public enum PersianMonths {
+/**
+ * Used as a data sheet of all available months and their persian equivalent and
+ * month number (in sequential sort) accordingly
+ *
+ * @author jytfsd
+ */
+public enum equivalent {
   MONTH_FARVARDIN("فروردین", 1),
   MONTH_ORDIBEHESHT("اردیبهشت", 2),
   MONTH_KHORDAD("خرداد", 3),
@@ -20,7 +26,7 @@ public enum PersianMonths {
   public final String monthPersianName;
   public final Integer monthNumber;
 
-  private PersianMonths(String monthPersianName, Integer monthNumber) {
+  private equivalent(String monthPersianName, Integer monthNumber) {
     this.monthNumber = monthNumber;
     this.monthPersianName = monthPersianName;
   }
@@ -33,8 +39,15 @@ public enum PersianMonths {
     return monthPersianName;
   }
 
-  public static Optional<PersianMonths> getMonthFromInt(Integer monthNumber) {
-    return Arrays.stream(PersianMonths.values())
+  /**
+   * Used to get the equivalent persian month name from their month number
+   * (sequential)
+   *
+   * @param monthNumber
+   * @return The persian month name
+   */
+  public static Optional<equivalent> getMonthFromInt(Integer monthNumber) {
+    return Arrays.stream(equivalent.values())
         .filter(month -> month.monthNumber == monthNumber)
         .findFirst();
   }

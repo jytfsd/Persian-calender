@@ -1,6 +1,5 @@
 package com.ryn;
 
-import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
@@ -8,10 +7,14 @@ import java.time.format.TextStyle;
 import java.util.Locale;
 import java.util.Optional;
 
+/**
+ * Persian Solar Hijri translation class
+ *
+ * @author jytfsd
+ */
 public class PersianCalender {
     /*
-     * Theres another way to set this variable:
-     * static final Locale defaultLocale = Locale.of("fa", "IR");
+     * Theres another way to set this variable if `local.of()` rather
      * the reason why im not doing this is to support older versions [Java 8 SE]
      */
     static final Locale defaultLocale = new Locale.Builder()
@@ -26,7 +29,7 @@ public class PersianCalender {
      *
      * @param date  Provides a specific date
      * @param style A style format for rendering the date by default its short
-     * @return
+     * @return A somewhat translation of an date to persian format
      */
     public String persianStandardize(LocalDate date, Optional<FormatStyle> style) {
         String monthFormat = date.format(
@@ -39,15 +42,17 @@ public class PersianCalender {
                 || date.getMonthValue() == 7)
             monthFormat = monthFormat.replace("\u0654", "");
 
+        // We wont need to change the month name from the ISO translation to the persian
+        // if we have a only numerical
         if (!style.isEmpty() && !style.get().equals(FormatStyle.SHORT))
             monthFormat = monthFormat.replace(
                     date.getMonth().getDisplayName(TextStyle.FULL_STANDALONE, defaultLocale),
-                    PersianMonths.getMonthFromInt(date.getMonthValue()).get().getMonthName());
+                    equivalent.getMonthFromInt(date.getMonthValue()).get().getMonthName());
 
         return monthFormat;
     }
 
-    public static void main(String[] args) throws InterruptedException, IOException {
-
+    public static void main(String[] args) {
+        // The reason why this is empty is i simply don't know bruh
     }
 }
