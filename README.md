@@ -8,15 +8,15 @@
 
 ## Features
 
-- Converting Month names
-- Converting Day & Month & Year following The Solar Hijri calender
-- Convert the local time of a specific time zone to Solar Hijri
+- [] Converting Month names
+- [x] Converting Day & Month & Year following The Solar Hijri calender
+- [] Convert the local time of a specific time zone to Solar Hijri
 
 ## Dev Guide
 
-- [] Library must be efficient
-- [] Library testing must be done with API
-- [] Library must include proper documentation
-- [] Library must include up to date Java APIs
-- [] Library must follow ISO standards
-- [] Library must account for leap years
+- [x] Library must be efficient
+- [x] Library testing must be done with API
+- [x] Library must include proper documentation
+- [x] Library must include up to date Java APIs
+- [x] Library must follow ISO standards
+- [x] Library must account for leap years
