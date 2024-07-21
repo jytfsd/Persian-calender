@@ -39,6 +39,7 @@ As of now - This libary won't support arabic specific symbols even if it means r
 ## Notices
 - As mentioned above arabic specific symbols are removed and shall not be included.
 - Java dates are supposed to be immutable thus there won't be any post formatting support. *Although it might be added*
+- As required by all goverment applications - The code does follow ISO guidelines however in these examples or even terminal applications the format might be altered. This is not due to any formating errors.
 
 ## Features
  
