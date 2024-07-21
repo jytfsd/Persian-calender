@@ -2,7 +2,7 @@
 # Description
 
 [**Click for persian version of the documentation**](./README.FA.md)
-> Put it simply this is a library for the Persian Calender[Solar Hijri]
+> Put it simply this is a library for the Persian Calender[Jalali]
 >
 > This library is only for Iran persian and specific arabic stuff such as Hamza **ARE REMOVED AND SHALL NOT BE SUPPORTED**
 
