@@ -1,10 +1,8 @@
+[**Click for persian version of the documentation**](./README.FA.md)
 
 # Description
 
-[**Click for persian version of the documentation**](./README.FA.md)
-> Put it simply this is a library for the Persian Calender[Jalali]
->
-> This library is only for Iran persian and specific arabic stuff such as Hamza **ARE REMOVED AND SHALL NOT BE SUPPORTED**
+As of now - This libary won't support arabic specific symbols even if it means removing it at run time; goverment applications should take note of this.
 
 ## Examples
 
@@ -38,20 +36,19 @@
                         Optional.of(FormatStyle.LONG))); // ۸ اردیبهشت ۱۴۰۳
 ```
 
+## Notices
+- As mentioned above arabic specific symbols are removed and shall not be included.
+- Java dates are supposed to be immutable thus there won't be any post formatting support. *Although it might be added*
+
 ## Features
-
-### As regards to foarmatting the dates with this libary its simply not possible at the momment cause this is just meant to convert dates rather than the pre-existing crap libaries that are just forkes of the LocalDate libary so a big huge code mess with no reliablity and i'll work on that
-
-- [] Converting Month names
+ 
+- [x] Converting Month names
 - [x] Converting Day & Month & Year following The Solar Hijri calender
-- [] Convert the local time of a specific time zone to Solar Hijri
 
 ## Dev Guide
 
 - [x] Library must be efficient
-- [x] Library testing must be done with API
+- [x] Library testing must be done with an external API
 - [x] Library must include proper documentation
-- [x] Library must include up to date Java APIs
 - [x] Library must follow ISO standards
-- [x] Library must account for leap years
-- [x] Library must both follow Sonarlint standards aswell as markdown
+- [x] Library must follow all application specific style guides (SonarLint and Markdown)
