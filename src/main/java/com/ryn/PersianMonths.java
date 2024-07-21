@@ -9,7 +9,7 @@ import java.util.Optional;
  *
  * @author jytfsd
  */
-public enum equivalent {
+public enum PersianMonths {
   MONTH_FARVARDIN("فروردین", 1),
   MONTH_ORDIBEHESHT("اردیبهشت", 2),
   MONTH_KHORDAD("خرداد", 3),
@@ -26,7 +26,7 @@ public enum equivalent {
   public final String monthPersianName;
   public final Integer monthNumber;
 
-  private equivalent(String monthPersianName, Integer monthNumber) {
+  private PersianMonths(String monthPersianName, Integer monthNumber) {
     this.monthNumber = monthNumber;
     this.monthPersianName = monthPersianName;
   }
@@ -46,8 +46,8 @@ public enum equivalent {
    * @param monthNumber
    * @return The persian month name
    */
-  public static Optional<equivalent> getMonthFromInt(Integer monthNumber) {
-    return Arrays.stream(equivalent.values())
+  public static Optional<PersianMonths> getMonthFromInt(Integer monthNumber) {
+    return Arrays.stream(PersianMonths.values())
         .filter(month -> month.monthNumber == monthNumber)
         .findFirst();
   }

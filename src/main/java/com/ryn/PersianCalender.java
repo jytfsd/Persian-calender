@@ -47,7 +47,7 @@ public class PersianCalender {
         if (!style.isEmpty() && !style.get().equals(FormatStyle.SHORT))
             monthFormat = monthFormat.replace(
                     date.getMonth().getDisplayName(TextStyle.FULL_STANDALONE, defaultLocale),
-                    equivalent.getMonthFromInt(date.getMonthValue()).get().getMonthName());
+                    PersianMonths.getMonthFromInt(date.getMonthValue()).get().getMonthName());
 
         return monthFormat;
     }
